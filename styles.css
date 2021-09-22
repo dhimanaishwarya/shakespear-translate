@@ -1,0 +1,11 @@
+body {
+  background-image: url("images/6838373-yoda-wallpaper.jpg");
+  background-color: #e9d8d8;
+  text-align: center;
+}
+
+textarea {
+  padding-bottom: 10px;
+  width: 800px;
+  height: 200px;
+}

@@ -2,7 +2,7 @@ const inputText = document.querySelector("#input");
 const translateBtn = document.querySelector("#translate");
 const outputText = document.querySelector("#output");
 
-const serverUrl = "https://api.funtranslations.com/translate/pirate.json";
+const serverUrl = "https://api.funtranslations.com/translate/yoda.json";
 
 
 
@@ -13,13 +13,18 @@ const newUrl = () => {
 
 
 
-translateBtn.addEventListener("click", Url => {
-    console.log(newUrl());
-    fetch(newUrl(Url))
+translateBtn.addEventListener("click", () => {
+
+    fetch(newUrl())
         .then(response => response.json())
-        .then(json => json.contents.translated)
+        .then(json => {
+            outputText.innerText = json.contents.translated;
+
+        })
         .catch(error => {
             console.log(error.message);
-            console.log("server is down ! try again later")
+            alert("server is down ! try again later")
         })
+
+
 })
