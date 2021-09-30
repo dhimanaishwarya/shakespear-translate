@@ -7,7 +7,7 @@ const serverUrl = "https://api.funtranslations.com/translate/yoda.json";
 
 
 const newUrl = () => {
-    return `${serverUrl}?text="${inputText.value}"`
+    return `${serverUrl}?text=${inputText.value}`
 };
 
 
